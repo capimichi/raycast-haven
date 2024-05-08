@@ -10,7 +10,7 @@
 # @raycast.packageName capimichi
 
 # Documentation:
-# @raycast.description Converts the selected MD file to PDF using Pandoc.
+# @raycast.description Converts the selected MD file to PDF using Pandoc. It requires Pandoc to be installed, and you can choose the PDF engine to use, but first you need to install it. You can install the PDF engines using Homebrew. For example, to install the `weasyprint` engine, you can run `brew install weasyprint`.
 # @raycast.author Michele Capicchioni
 
 # Argument
