@@ -10,7 +10,7 @@
 # @raycast.packageName capimichi
 
 # Documentation:
-# @raycast.description Open the url with Jina AI reader.
+# @raycast.description Open the url with Jina AI reader. It uses the pbpaste command to get the URL from the clipboard.
 # @raycast.author Michele Capicchioni
 
 on run argv
