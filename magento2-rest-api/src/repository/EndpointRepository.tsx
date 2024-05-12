@@ -14,11 +14,14 @@ class EndpointRepository {
       for (const path in data.paths) {
             // @ts-ignore
           for (const method in data.paths[path]) {
-                // @ts-ignore
+
+            // @ts-ignore
+              var description = data.paths[path][method].description;
+
               const endpoint: Endpoint = {
                     path: path,
                     method: method,
-                    description: data.paths[path][method].description,
+                    description: description,
                 };
                 endpoints.push(endpoint);
             }
