@@ -10,7 +10,7 @@
 # @raycast.packageName capimichi
 
 # Documentation:
-# @raycast.description Split a PDF file into separate pages using the `pdfseparate` command from the `poppler-utils` package.
+# @raycast.description Split a PDF file into separate pages using the `pdfseparate` command from the `poppler-utils` package. Install it using Homebrew: `brew install poppler`.
 # @raycast.author Michele Capicchioni
 
 on run argv
