@@ -23,7 +23,7 @@ on run argv
     end try
 
     # Use file manager to select video file
-    set videoFile to POSIX path of (choose file with prompt "Select video file" of type {"mp4", "mov"})
+    set videoFile to POSIX path of (choose file with prompt "Select video file" of type {"mp4", "mov", "mkv"})
     
     # check if video file is selected
     if videoFile is "" then
@@ -31,7 +31,7 @@ on run argv
     end if
 
     # Use file manager to select audio file
-    set audioFile to POSIX path of (choose file with prompt "Select audio file" of type {"mp3", "wav"})
+    set audioFile to POSIX path of (choose file with prompt "Select audio file" of type {"mp3", "wav", "mp4"})
 
     # check if audio file is selected
     if audioFile is "" then
@@ -48,5 +48,7 @@ on run argv
 
     # Run ffmpeg command ffmpeg -i video.mp4 -i audio.wav -map 0:v -map 1:a -c:v copy -shortest output.mp4
     set command to ffmpegPath & " -i " & quoted form of videoFile & " -i " & quoted form of audioFile & " -map 0:v -map 1:a -c:v copy -shortest " & quoted form of outputFile
+
+    do shell script command
 
 end run
